@@ -1,0 +1,8 @@
+discord.py
+python-dotenv
+firebase-admin
+yt-dlp==2023.12.30
+gTTS
+PyNaCl
+Flask
+Flask-Discord

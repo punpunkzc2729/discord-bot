@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bot Control Panel</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-robot"></i> Bot Control Panel</h1>
+            <div class="user-info">
+                <span>Welcome, {{ user.username }}!</span>
+                <img src="{{ user.avatar_url }}" alt="Avatar" class="avatar">
+                <a href="{{ url_for('logout') }}" class="btn btn-logout">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </a>
+            </div>
+        </header>
+
+        <main>
+            <div class="guild-selector">
+                <label for="guild-select">
+                    <i class="fas fa-server"></i> Select a Server:
+                </label>
+                <select id="guild-select">
+                    <option value="">--Please choose a server--</option>
+                    {% for guild in guilds %}
+                    <option value="{{ guild.id }}">{{ guild.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div id="dashboard-content" class="hidden">
+                <div class="controls-section">
+                    <h2><i class="fas fa-music"></i> Music Player</h2>
+                    
+                    <div class="play-control">
+                        <div class="search-input">
+                            <i class="fas fa-search"></i>
+                            <input type="text" id="song-query" placeholder="Search or paste YouTube URL">
+                            <button id="play-btn" class="btn-add">
+                                <i class="fas fa-play"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="main-controls">
+                        <button id="pause-btn" class="control-btn">
+                            <i class="fas fa-pause"></i>
+                        </button>
+                        <button id="resume-btn" class="control-btn">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <button id="skip-btn" class="control-btn">
+                            <i class="fas fa-step-forward"></i>
+                        </button>
+                        <button id="stop-btn" class="control-btn danger">
+                            <i class="fas fa-stop"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="status-section">
+                    <div class="now-playing">
+                        <h2><i class="fas fa-headphones"></i> Now Playing</h2>
+                        <p id="current-track">Nothing is playing.</p>
+                    </div>
+                    <div class="queue">
+                        <h2><i class="fas fa-list"></i> Up Next</h2>
+                        <ul id="queue-list">
+                            <li>The queue is empty.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Link to external JavaScript -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
