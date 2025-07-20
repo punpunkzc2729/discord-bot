@@ -1,0 +1,24 @@
+server: # REST and WS server
+  port: 2333
+  address: 0.0.0.0
+lavalink:
+  server:
+    password: "youshallnotpass" # <-- รหัสผ่านที่ต้องตรงกับใน .env
+    sources:
+      youtube: true
+      soundcloud: true
+    filters: # All filters are enabled by default
+      volume: true
+      equalizer: true
+      karaoke: true
+      timescale: true
+      tremolo: true
+      vibrato: true
+      rotation: true
+      distortion: true
+      channelMix: true
+      lowPass: true
+logging:
+  level:
+    root: INFO
+    lavalink: INFO

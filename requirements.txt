@@ -1,8 +1,26 @@
-discord.py
-python-dotenv
-firebase-admin
-yt-dlp==2023.12.30
-gTTS
-PyNaCl
-Flask
-Flask-Discord
+# Discord Bot Dependencies
+discord.py==2.4.0
+PyNaCl==1.5.0
+
+# Audio Processing
+yt-dlp==2024.8.6
+gTTS==2.5.3
+
+# Web Framework
+Flask==3.0.3
+requests==2.32.3
+
+# Database
+firebase-admin==6.6.0
+
+# Environment & Utilities
+python-dotenv==1.0.1
+aiohttp==3.10.10
+
+# Security & SSL
+certifi==2024.8.30
+
+# Optional: Development tools (uncomment if needed)
+# pytest==8.3.3
+# black==24.8.0
+# flake8==7.1.1

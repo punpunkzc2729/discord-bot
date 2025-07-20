@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แผงควบคุมบอท</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+</head>
+<body>
+    <div class="main-container">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h3><i class="fas fa-robot"></i> Bot Control</h3>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="active"><a href="#"><i class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a></li>
+                <li><a href="#"><i class="fas fa-list-music"></i> <span>Queue</span></a></li>
+                <li><a href="#"><i class="fas fa-cog"></i> <span>Settings</span></a></li>
+            </ul>
+            <div class="sidebar-footer">
+                 <div class="user-info">
+                    <img src="{{ user.avatar_url }}" alt="Avatar" class="avatar">
+                    <div class="user-details">
+                        <span>{{ user.username }}</span>
+                        <a href="{{ url_for('logout') }}">ออกจากระบบ</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <main class="content">
+            <header class="content-header">
+                <div class="guild-selector">
+                    <label for="guild-select"><i class="fas fa-server"></i></label>
+                    <select id="guild-select">
+                        <option value="">-- กรุณาเลือกเซิร์ฟเวอร์ --</option>
+                        {% for guilds in guilds %}
+                        <option value="{{ guilds.id }}">{{ guilds.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </header>
+
+            <div id="dashboard-content" class="dashboard-grid hidden">
+                <!-- Player Section -->
+                <div class="card player-card">
+                    <div class="album-art">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <div class="track-info">
+                        <h2 id="current-track-title">ยังไม่มีเพลงเล่น</h2>
+                        <p id="current-track-requester">เลือกเพลงได้เลย</p>
+                    </div>
+                    <div class="controls">
+                        <button id="skip-btn" class="control-btn" title="ข้ามเพลง"><i class="fas fa-forward-step"></i></button>
+                        <button id="stop-btn" class="control-btn stop" title="หยุดเพลง"><i class="fas fa-stop"></i></button>
+                    </div>
+                </div>
+
+                <!-- Add Song & Queue Section -->
+                <div class="card song-management-card">
+                    <h3><i class="fa-solid fa-plus"></i> เพิ่มเพลงใหม่</h3>
+                     <div class="play-control">
+                        <input type="text" id="song-query" placeholder="ชื่อเพลง หรือ ลิงก์ YouTube">
+                        <button id="play-btn" class="btn-play"><i class="fas fa-play"></i></button>
+                    </div>
+                    
+                    <hr class="divider">
+
+                    <h3><i class="fas fa-list"></i> คิวเพลงถัดไป</h3>
+                    <ul id="queue-list">
+                        <li>คิวยังว่างอยู่</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>

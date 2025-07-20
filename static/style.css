@@ -1,0 +1,367 @@
+/* static/style.css */
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;700&display=swap');
+
+:root {
+    --bg-dark: #11101d;
+    --bg-light: #1d1b31;
+    --bg-surface: #2a284b;
+    --primary: #8a2be2;
+    --primary-light: #a052e8;
+    --text-light: #e0e0e0;
+    --text-dark: #a0a0a0;
+    --border: #3c3a61;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Sarabun', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    display: flex;
+}
+
+.main-container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* --- Sidebar --- */
+.sidebar {
+    width: 260px;
+    background-color: var(--bg-light);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s ease;
+    border-right: 1px solid var(--border);
+}
+
+.sidebar-header {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.5rem;
+}
+
+.sidebar-header i {
+    margin-right: 10px;
+}
+
+.sidebar-menu {
+    list-style: none;
+    flex-grow: 1;
+}
+
+.sidebar-menu li {
+    margin-bottom: 10px;
+}
+
+.sidebar-menu a {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    color: var(--text-dark);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar-menu a:hover, .sidebar-menu li.active a {
+    background-color: var(--primary);
+    color: white;
+}
+
+.sidebar-menu a i {
+    margin-right: 15px;
+    font-size: 1.2rem;
+    width: 20px;
+    text-align: center;
+}
+
+.sidebar-footer {
+    border-top: 1px solid var(--border);
+    padding-top: 20px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.user-details span {
+    display: block;
+    font-weight: 500;
+}
+
+.user-details a {
+    color: var(--text-dark);
+    font-size: 0.8rem;
+    text-decoration: none;
+}
+
+/* --- Main Content --- */
+.content {
+    flex-grow: 1;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.content-header {
+    margin-bottom: 30px;
+}
+
+.guild-selector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--bg-light);
+    padding: 10px 20px;
+    border-radius: 12px;
+    max-width: 500px;
+}
+
+#guild-select {
+    width: 100%;
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 1rem;
+    font-family: 'Sarabun', sans-serif;
+    outline: none;
+}
+
+#guild-select option {
+    background-color: var(--bg-dark);
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 30px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* --- Cards --- */
+.card {
+    background-color: var(--bg-light);
+    border-radius: 16px;
+    padding: 25px;
+    border: 1px solid var(--border);
+}
+
+.card h3 {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 15px;
+}
+
+/* Player Card */
+.player-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(145deg, var(--bg-surface), var(--bg-light));
+}
+
+.album-art {
+    width: 150px;
+    height: 150px;
+    background-color: var(--bg-dark);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: var(--primary);
+}
+
+.track-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.track-info p {
+    color: var(--text-dark);
+    margin-bottom: 25px;
+}
+
+.controls {
+    display: flex;
+    gap: 20px;
+}
+
+.control-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--bg-surface);
+    color: var(--text-light);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.control-btn:hover {
+    background-color: var(--primary);
+}
+
+.control-btn:active {
+    transform: scale(0.9);
+}
+
+.control-btn.stop {
+    color: #ff5555;
+}
+.control-btn.stop:hover {
+    background-color: #ff5555;
+    color: white;
+}
+
+/* Add Song & Queue Card */
+.divider {
+    border: none;
+    height: 1px;
+    background-color: var(--border);
+    margin: 25px 0;
+}
+
+.play-control {
+    display: flex;
+    gap: 10px;
+}
+
+#song-query {
+    flex-grow: 1;
+    padding: 12px 15px;
+    background-color: var(--bg-dark);
+    border: 1px solid var(--border);
+    color: var(--text-light);
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.btn-play {
+    padding: 0 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--primary);
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-play:hover {
+    background-color: var(--primary-light);
+}
+
+#queue-list {
+    list-style: none;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+#queue-list li {
+    padding: 10px 5px;
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#queue-list li:last-child {
+    border: none;
+}
+
+/* --- Login Page --- */
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+.login-card {
+    padding: 40px;
+}
+.login-card p {
+    margin: 20px 0;
+    color: var(--text-dark);
+}
+.btn-discord {
+    background-color: #5865F2;
+    color: white;
+    font-size: 1.1em;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s;
+}
+.btn-discord:hover {
+    background-color: #4752c4;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+    .main-container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        align-items: center;
+        padding: 10px;
+        gap: 20px;
+    }
+    .sidebar-header, .sidebar-footer {
+        display: none;
+    }
+    .sidebar-menu {
+        display: flex;
+        gap: 10px;
+        flex-grow: 1;
+        justify-content: center;
+    }
+    .sidebar-menu span {
+        display: none;
+    }
+    .sidebar-menu a i {
+        margin-right: 0;
+    }
+}

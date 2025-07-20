@@ -1,0 +1,11 @@
+/discord-bot-dashboard
+|-- bot.py                  # ไฟล์หลักของบอท (รวมทุกคำสั่ง)
+|-- webapp.py               # ไฟล์หลักของหน้าเว็บ
+|-- templates/
+|   |-- dashboard.html      # หน้าเว็บเวอร์ชันใหม่
+|-- static/
+|   |-- style.css           # CSS เวอร์ชันใหม่
+|   |-- main.js             # JS สำหรับหน้าเว็บ
+|-- .env
+|-- requirements.txt
+|-- .gitignore

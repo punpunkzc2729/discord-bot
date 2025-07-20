@@ -1,0 +1,11 @@
+2025-07-20 16:12:35,494 - discord.ext.commands.bot - WARNING - Privileged message content intent is missing, commands may not work as expected.
+2025-07-20 16:12:35,494 - discord.client - INFO - logging in using static token
+2025-07-20 16:12:37,240 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 498de5eeb70e0ad25da60834c8b43531).
+2025-07-20 16:12:39,711 - __main__ - INFO - Successfully synced 7 commands
+2025-07-20 16:12:54,181 - discord.voice_client - INFO - Connecting to voice...
+2025-07-20 16:12:54,181 - discord.voice_client - INFO - Starting voice handshake... (connection attempt 1)
+2025-07-20 16:12:54,679 - discord.voice_client - INFO - Voice handshake complete. Endpoint found singapore6699.discord.media
+2025-07-20 16:12:55,433 - __main__ - INFO - Extracting info for URL: https://www.youtube.com/watch?v=dmNAK1YkTnk&list=RDdmNAK1YkTnk&start_radio=1
+2025-07-20 16:12:56,360 - __main__ - ERROR - Error in YTDLSource.from_url: [0;31mERROR:[0m [youtube] dmNAK1YkTnk: Failed to extract any player response; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-07-20 16:12:56,360 - __main__ - ERROR - Failed to get audio source: [0;31mERROR:[0m [youtube] dmNAK1YkTnk: Failed to extract any player response; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+2025-07-20 16:13:13,350 - discord.player - INFO - ffmpeg process 26108 successfully terminated with return code of 0.
