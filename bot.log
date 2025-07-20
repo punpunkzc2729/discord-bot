@@ -1,11 +1,1215 @@
-2025-07-20 16:12:35,494 - discord.ext.commands.bot - WARNING - Privileged message content intent is missing, commands may not work as expected.
-2025-07-20 16:12:35,494 - discord.client - INFO - logging in using static token
-2025-07-20 16:12:37,240 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 498de5eeb70e0ad25da60834c8b43531).
-2025-07-20 16:12:39,711 - __main__ - INFO - Successfully synced 7 commands
-2025-07-20 16:12:54,181 - discord.voice_client - INFO - Connecting to voice...
-2025-07-20 16:12:54,181 - discord.voice_client - INFO - Starting voice handshake... (connection attempt 1)
-2025-07-20 16:12:54,679 - discord.voice_client - INFO - Voice handshake complete. Endpoint found singapore6699.discord.media
-2025-07-20 16:12:55,433 - __main__ - INFO - Extracting info for URL: https://www.youtube.com/watch?v=dmNAK1YkTnk&list=RDdmNAK1YkTnk&start_radio=1
-2025-07-20 16:12:56,360 - __main__ - ERROR - Error in YTDLSource.from_url: [0;31mERROR:[0m [youtube] dmNAK1YkTnk: Failed to extract any player response; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
-2025-07-20 16:12:56,360 - __main__ - ERROR - Failed to get audio source: [0;31mERROR:[0m [youtube] dmNAK1YkTnk: Failed to extract any player response; please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
-2025-07-20 16:13:13,350 - discord.player - INFO - ffmpeg process 26108 successfully terminated with return code of 0.
+2025-07-20 21:50:14,172 - __main__ - ERROR - Error in Firebase listener: Timeout of 300.0s exceeded, last exception: 429 Quota exceeded.
+2025-07-20 21:50:39,456 - __main__ - INFO - Firebase connection established for bot
+2025-07-20 21:50:39,553 - __main__ - WARNING - Opus library not found - voice quality may be reduced
+2025-07-20 21:50:39,553 - __main__ - INFO - Voice system initialized successfully
+2025-07-20 21:50:39,555 - discord.client - INFO - logging in using static token
+2025-07-20 21:50:41,193 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 976f2f222f63ab366e7ed7520396a5ca).
+2025-07-20 21:50:43,239 - __main__ - INFO - Bot logged in as พี่มาแล้วน้อง (ID: 1056951165943816303)
+2025-07-20 21:50:43,702 - __main__ - INFO - Successfully synced 8 commands
+2025-07-20 21:50:43,702 - __main__ - INFO - Synced command: play - เล่นเพลงจาก YouTube
+2025-07-20 21:50:43,702 - __main__ - INFO - Synced command: skip - ข้ามเพลงปัจจุบัน
+2025-07-20 21:50:43,703 - __main__ - INFO - Synced command: stop - หยุดเล่นเพลงและล้างคิว
+2025-07-20 21:50:43,703 - __main__ - INFO - Synced command: list - แสดงคิวเพลงปัจจุบัน
+2025-07-20 21:50:43,703 - __main__ - INFO - Synced command: speak - แปลงข้อความเป็นเสียงพูด (ภาษาไทย)
+2025-07-20 21:50:43,703 - __main__ - INFO - Synced command: wake - ส่งข้อความส่วนตัวไปปลุกเพื่อน
+2025-07-20 21:50:43,703 - __main__ - INFO - Synced command: join - ให้บอทเข้าห้องเสียง
+2025-07-20 21:50:43,703 - __main__ - INFO - Synced command: leave - ให้บอทออกจากห้องเสียง
+2025-07-20 21:50:43,703 - __main__ - INFO - Started Firebase command listener
+2025-07-20 21:51:43,946 - discord.app_commands.tree - ERROR - Ignoring exception in command tree
+Traceback (most recent call last):
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\app_commands\tree.py", line 1151, in wrapper
+    await self._call(interaction)
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\app_commands\tree.py", line 1283, in _call
+    command, options = self._get_app_command_options(data)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\app_commands\tree.py", line 1187, in _get_app_command_options
+    raise CommandNotFound(name, parents)
+discord.app_commands.errors.CommandNotFound: Application command 'join' not found
+2025-07-20 21:51:43,950 - discord.app_commands.tree - ERROR - Ignoring exception in command tree
+Traceback (most recent call last):
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\app_commands\tree.py", line 1151, in wrapper
+    await self._call(interaction)
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\app_commands\tree.py", line 1283, in _call
+    command, options = self._get_app_command_options(data)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\app_commands\tree.py", line 1187, in _get_app_command_options
+    raise CommandNotFound(name, parents)
+discord.app_commands.errors.CommandNotFound: Application command 'join' not found
+2025-07-20 21:51:44,381 - discord.voice_state - INFO - Connecting to voice...
+2025-07-20 21:51:44,382 - discord.voice_state - INFO - Starting voice handshake... (connection attempt 1)
+2025-07-20 21:51:44,918 - discord.voice_state - INFO - Voice handshake complete. Endpoint found: singapore11005.discord.media
+2025-07-20 21:51:45,125 - discord.voice_state - INFO - Voice connection complete.
+2025-07-20 21:51:45,556 - __main__ - INFO - Successfully joined voice channel: ล็อบบี้
+2025-07-20 21:52:12,171 - __main__ - ERROR - Unexpected error in play command: 404 Not Found (error code: 10062): Unknown interaction
+2025-07-20 21:52:12,203 - __main__ - ERROR - Unexpected error in play command: 404 Not Found (error code: 10062): Unknown interaction
+2025-07-20 21:52:12,238 - discord.voice_state - INFO - Connecting to voice...
+2025-07-20 21:52:12,238 - discord.voice_state - INFO - Starting voice handshake... (connection attempt 1)
+2025-07-20 21:52:12,487 - discord.voice_state - INFO - The voice handshake is being terminated for Channel ID 894871922637172753 (Guild ID 894871922637172747)
+2025-07-20 21:52:12,722 - discord.voice_state - INFO - Voice handshake complete. Endpoint found: singapore11005.discord.media
+2025-07-20 21:52:12,919 - discord.voice_state - INFO - Voice connection complete.
+2025-07-20 21:52:12,920 - __main__ - INFO - Connected to voice channel: ล็อบบี้
+2025-07-20 21:52:13,411 - __main__ - INFO - Extracting info for URL: https://www.youtube.com/watch?v=Mcp1UhXsyU4&list=RDMcp1UhXsyU4&start_radio=1
+2025-07-20 21:52:16,706 - __main__ - INFO - Successfully created audio source for: Green Tea & Honey
+2025-07-20 21:52:43,144 - __main__ - ERROR - Error in Firebase listener: Timeout of 300.0s exceeded, last exception: 429 Quota exceeded.
+2025-07-20 21:52:43,145 - __main__ - ERROR - Failed to connect to voice channel: 
+2025-07-20 21:52:43,146 - discord.client - ERROR - Attempting a reconnect in 3.22s
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 1067, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 770, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 725, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 642, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1209, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1532, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1148, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\tasks.py", line 506, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\timeouts.py", line 116, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+2025-07-20 21:53:05,327 - __main__ - INFO - Queue is empty for guild 894871922637172747
+2025-07-20 21:53:05,327 - discord.player - INFO - ffmpeg process 9180 has not terminated. Waiting to terminate...
+2025-07-20 21:53:05,332 - discord.player - INFO - ffmpeg process 9180 should have terminated with a return code of 1.
+2025-07-20 21:53:08,160 - __main__ - ERROR - Error in Firebase listener: Timeout of 300.0s exceeded, last exception: 429 Quota exceeded.
+2025-07-20 21:54:45,239 - __main__ - ERROR - Error in Firebase listener: Timeout of 300.0s exceeded, last exception: 429 Quota exceeded.
+2025-07-20 21:54:45,240 - discord.client - ERROR - Attempting a reconnect in 5.46s
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 1067, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 770, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 725, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 642, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1209, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1532, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1148, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\tasks.py", line 506, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\timeouts.py", line 116, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+2025-07-20 21:54:50,286 - __main__ - ERROR - Error processing guild 575267060569997322: Timeout of 300.0s exceeded, last exception: 429 Quota exceeded.
+2025-07-20 21:55:20,302 - __main__ - ERROR - Unexpected error in play command: 404 Not Found (error code: 10062): Unknown interaction
+2025-07-20 21:55:20,306 - __main__ - ERROR - Unexpected error in play command: 404 Not Found (error code: 10062): Unknown interaction
+2025-07-20 21:55:20,378 - __main__ - INFO - Play command started for query: https://youtu.be/dmNAK1YkTnk?si=MKxK6rbruD-XAtaj
+2025-07-20 21:55:20,379 - discord.voice_state - INFO - Connecting to voice...
+2025-07-20 21:55:20,379 - discord.voice_state - INFO - Starting voice handshake... (connection attempt 1)
+2025-07-20 21:55:20,642 - discord.voice_state - ERROR - Disconnected from voice... Reconnecting in 0.90s.
+Traceback (most recent call last):
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\voice_state.py", line 598, in _poll_voice_ws
+    await self.ws.poll_event()
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\gateway.py", line 1039, in poll_event
+    raise ConnectionClosed(self.ws, shard_id=None, code=self._close_code)
+discord.errors.ConnectionClosed: Shard ID None WebSocket closed with 4006
+2025-07-20 21:55:20,876 - discord.voice_state - INFO - Voice handshake complete. Endpoint found: singapore11005.discord.media
+2025-07-20 21:55:21,093 - discord.voice_state - INFO - Voice connection complete.
+2025-07-20 21:55:21,094 - __main__ - INFO - Connected to voice channel: ล็อบบี้
+2025-07-20 21:55:21,094 - __main__ - ERROR - Unexpected error in play command: name 'start_time' is not defined
+2025-07-20 21:55:21,558 - discord.voice_state - INFO - The voice handshake is being terminated for Channel ID 894871922637172753 (Guild ID 894871922637172747)
+2025-07-20 21:55:21,558 - discord.voice_state - INFO - Connecting to voice...
+2025-07-20 21:55:21,558 - discord.voice_state - INFO - Starting voice handshake... (connection attempt 1)
+2025-07-20 21:55:21,825 - discord.voice_state - INFO - The voice handshake is being terminated for Channel ID 894871922637172753 (Guild ID 894871922637172747)
+2025-07-20 21:55:22,051 - discord.voice_state - INFO - Voice handshake complete. Endpoint found: singapore11005.discord.media
+2025-07-20 21:55:22,475 - discord.voice_state - INFO - Voice connection complete.
+2025-07-20 21:56:02,187 - __main__ - ERROR - Unexpected error in play command: 404 Not Found (error code: 10062): Unknown interaction
+2025-07-20 21:56:02,191 - __main__ - ERROR - Unexpected error in play command: 404 Not Found (error code: 10062): Unknown interaction
+2025-07-20 21:56:02,257 - __main__ - INFO - Play command started for query: https://www.youtube.com/watch?v=dmNAK1YkTnk&list=R...
+2025-07-20 21:56:02,257 - discord.voice_state - INFO - Connecting to voice...
+2025-07-20 21:56:02,257 - discord.voice_state - INFO - Starting voice handshake... (connection attempt 1)
+2025-07-20 21:56:02,509 - discord.voice_state - ERROR - Disconnected from voice... Reconnecting in 0.80s.
+Traceback (most recent call last):
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\voice_state.py", line 598, in _poll_voice_ws
+    await self.ws.poll_event()
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\gateway.py", line 1039, in poll_event
+    raise ConnectionClosed(self.ws, shard_id=None, code=self._close_code)
+discord.errors.ConnectionClosed: Shard ID None WebSocket closed with 4006
+2025-07-20 21:56:02,759 - discord.voice_state - INFO - Voice handshake complete. Endpoint found: singapore11005.discord.media
+2025-07-20 21:56:03,234 - discord.voice_state - INFO - Voice connection complete.
+2025-07-20 21:56:03,234 - __main__ - INFO - Connected to voice channel: ล็อบบี้
+2025-07-20 21:56:03,234 - __main__ - ERROR - Unexpected error in play command: name 'start_time' is not defined
+2025-07-20 21:56:03,330 - discord.voice_state - INFO - The voice handshake is being terminated for Channel ID 894871922637172753 (Guild ID 894871922637172747)
+2025-07-20 21:56:03,330 - discord.voice_state - INFO - Connecting to voice...
+2025-07-20 21:56:03,330 - discord.voice_state - INFO - Starting voice handshake... (connection attempt 1)
+2025-07-20 21:56:03,604 - discord.voice_state - INFO - The voice handshake is being terminated for Channel ID 894871922637172753 (Guild ID 894871922637172747)
+2025-07-20 21:56:03,831 - discord.voice_state - INFO - Voice handshake complete. Endpoint found: singapore11005.discord.media
+2025-07-20 21:56:04,052 - discord.voice_state - INFO - Voice connection complete.
+2025-07-20 21:56:36,744 - discord.voice_state - INFO - Disconnected from voice by force... potentially reconnecting.
+2025-07-20 21:56:44,453 - __main__ - ERROR - Unexpected error in play command: 404 Not Found (error code: 10062): Unknown interaction
+2025-07-20 21:56:44,453 - __main__ - ERROR - Unexpected error in play command: 404 Not Found (error code: 10062): Unknown interaction
+2025-07-20 21:56:44,576 - __main__ - INFO - Play command started for query: https://www.youtube.com/watch?v=dmNAK1YkTnk&list=R...
+2025-07-20 21:56:44,577 - discord.voice_state - INFO - Connecting to voice...
+2025-07-20 21:56:44,577 - discord.voice_state - INFO - Starting voice handshake... (connection attempt 1)
+2025-07-20 21:56:45,063 - discord.voice_state - INFO - Voice handshake complete. Endpoint found: singapore11005.discord.media
+2025-07-20 21:56:45,264 - discord.voice_state - INFO - Voice connection complete.
+2025-07-20 21:56:45,265 - __main__ - INFO - Connected to voice channel: ล็อบบี้
+2025-07-20 21:56:45,265 - __main__ - ERROR - Unexpected error in play command: name 'start_time' is not defined
+2025-07-20 21:57:06,746 - discord.voice_state - INFO - Reconnect was unsuccessful, disconnecting from voice normally...
+2025-07-20 21:57:06,746 - discord.voice_state - INFO - The voice handshake is being terminated for Channel ID 894871922637172753 (Guild ID 894871922637172747)
+2025-07-20 21:57:22,365 - __main__ - ERROR - Error in Firebase listener: Timeout of 300.0s exceeded, last exception: 429 Quota exceeded.
+2025-07-20 21:57:51,513 - __main__ - ERROR - Error in Firebase listener: Timeout of 300.0s exceeded, last exception: 429 Quota exceeded.
+2025-07-20 21:57:51,513 - discord.client - ERROR - Attempting a reconnect in 1.52s
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 1067, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 770, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 725, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 642, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1209, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1532, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1148, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\tasks.py", line 506, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\timeouts.py", line 116, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+2025-07-20 21:58:47,915 - __main__ - INFO - Firebase connection established for bot
+2025-07-20 21:58:48,004 - __main__ - WARNING - Opus library not found - voice quality may be reduced
+2025-07-20 21:58:48,004 - __main__ - INFO - Voice system initialized successfully
+2025-07-20 21:58:48,006 - discord.client - INFO - logging in using static token
+2025-07-20 21:58:51,725 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 756c1da5bc387f33737a6b747b737643).
+2025-07-20 21:58:53,743 - __main__ - INFO - Bot logged in as พี่มาแล้วน้อง (ID: 1056951165943816303)
+2025-07-20 21:58:55,176 - __main__ - INFO - Successfully synced 0 commands
+2025-07-20 21:58:55,176 - __main__ - ERROR - Missing critical commands: ['play', 'join', 'leave', 'skip', 'stop']
+2025-07-20 21:58:55,176 - __main__ - INFO - Started Firebase command listener with rate limiting
+2025-07-20 21:59:18,358 - __main__ - ERROR - Error in Firebase listener: Timeout of 300.0s exceeded, last exception: 429 Quota exceeded.
+2025-07-20 21:59:24,043 - __main__ - ERROR - Error processing guild 738709617571528735: Timeout of 300.0s exceeded, last exception: 429 Quota exceeded.
+2025-07-20 21:59:52,054 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Voice websocket poller' coro=<VoiceConnectionState._poll_voice_ws() done, defined at C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\voice_state.py:594> exception=ConnectionClosed('Shard ID None WebSocket closed with 4006')>
+Traceback (most recent call last):
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\voice_state.py", line 598, in _poll_voice_ws
+    await self.ws.poll_event()
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\gateway.py", line 1039, in poll_event
+    raise ConnectionClosed(self.ws, shard_id=None, code=self._close_code)
+discord.errors.ConnectionClosed: Shard ID None WebSocket closed with 4006
+2025-07-20 21:59:52,398 - __main__ - INFO - Firebase connection established for bot
+2025-07-20 21:59:52,500 - __main__ - WARNING - Opus library not found - voice quality may be reduced
+2025-07-20 21:59:52,500 - __main__ - INFO - Voice system initialized successfully
+2025-07-20 21:59:52,503 - discord.client - INFO - logging in using static token
+2025-07-20 21:59:54,110 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: b457540790afa1f3add3bfaab6692f2f).
+2025-07-20 21:59:56,125 - __main__ - INFO - Bot logged in as พี่มาแล้วน้อง (ID: 1056951165943816303)
+2025-07-20 21:59:56,600 - __main__ - INFO - Successfully synced 8 commands
+2025-07-20 21:59:56,600 - __main__ - INFO - Synced command: play - เล่นเพลงจาก YouTube
+2025-07-20 21:59:56,600 - __main__ - INFO - Synced command: skip - ข้ามเพลงปัจจุบัน
+2025-07-20 21:59:56,600 - __main__ - INFO - Synced command: stop - หยุดเล่นเพลงและล้างคิว
+2025-07-20 21:59:56,600 - __main__ - INFO - Synced command: list - แสดงคิวเพลงปัจจุบัน
+2025-07-20 21:59:56,600 - __main__ - INFO - Synced command: speak - แปลงข้อความเป็นเสียงพูด (ภาษาไทย)
+2025-07-20 21:59:56,600 - __main__ - INFO - Synced command: wake - ส่งข้อความส่วนตัวไปปลุกเพื่อน
+2025-07-20 21:59:56,601 - __main__ - INFO - Synced command: join - ให้บอทเข้าห้องเสียง
+2025-07-20 21:59:56,601 - __main__ - INFO - Synced command: leave - ให้บอทออกจากห้องเสียง
+2025-07-20 21:59:56,601 - __main__ - INFO - All critical commands synchronized successfully
+2025-07-20 21:59:56,601 - __main__ - INFO - Started Firebase command listener with rate limiting
+2025-07-20 22:01:24,354 - discord.voice_state - INFO - The voice handshake is being terminated for Channel ID 894871922637172753 (Guild ID 894871922637172747)
+2025-07-20 22:02:05,637 - __main__ - ERROR - Error in Firebase listener: Timeout of 300.0s exceeded, last exception: 429 Quota exceeded.
+2025-07-20 22:02:17,252 - __main__ - ERROR - Error in Firebase listener: Timeout of 300.0s exceeded, last exception: 429 Quota exceeded.
+2025-07-20 22:02:17,253 - __main__ - ERROR - Unexpected error in play command: 
+2025-07-20 22:02:17,253 - discord.client - ERROR - Attempting a reconnect in 2.05s
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 1067, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 770, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 725, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 642, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1209, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1532, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1148, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\tasks.py", line 506, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\timeouts.py", line 116, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+2025-07-20 22:03:17,421 - __main__ - INFO - Firebase connection established for bot
+2025-07-20 22:03:17,520 - __main__ - WARNING - Opus library not found - voice quality may be reduced
+2025-07-20 22:03:17,521 - __main__ - INFO - Voice system initialized successfully
+2025-07-20 22:03:17,523 - discord.client - INFO - logging in using static token
+2025-07-20 22:03:19,124 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: d65b1e397e6a96ee52f3dab0aa9e4de8).
+2025-07-20 22:03:21,163 - __main__ - INFO - Bot logged in as พี่มาแล้วน้อง (ID: 1056951165943816303)
+2025-07-20 22:03:21,683 - __main__ - INFO - Successfully synced 8 commands
+2025-07-20 22:03:21,683 - __main__ - INFO - Synced command: play - เล่นเพลงจาก YouTube
+2025-07-20 22:03:21,683 - __main__ - INFO - Synced command: skip - ข้ามเพลงปัจจุบัน
+2025-07-20 22:03:21,683 - __main__ - INFO - Synced command: stop - หยุดเล่นเพลงและล้างคิว
+2025-07-20 22:03:21,683 - __main__ - INFO - Synced command: list - แสดงคิวเพลงปัจจุบัน
+2025-07-20 22:03:21,683 - __main__ - INFO - Synced command: speak - แปลงข้อความเป็นเสียงพูด (ภาษาไทย)
+2025-07-20 22:03:21,683 - __main__ - INFO - Synced command: wake - ส่งข้อความส่วนตัวไปปลุกเพื่อน
+2025-07-20 22:03:21,683 - __main__ - INFO - Synced command: join - ให้บอทเข้าห้องเสียง
+2025-07-20 22:03:21,683 - __main__ - INFO - Synced command: leave - ให้บอทออกจากห้องเสียง
+2025-07-20 22:03:21,683 - __main__ - INFO - All critical commands synchronized successfully
+2025-07-20 22:03:21,684 - __main__ - INFO - Started Firebase command listener with rate limiting
+2025-07-20 22:03:27,415 - discord.gateway - INFO - Shard ID None has successfully RESUMED session 3a3aa65f323f06be4cb4396654c8d4e3.
+2025-07-20 22:04:14,603 - __main__ - ERROR - Error in Firebase listener: Timeout of 300.0s exceeded, last exception: 429 Quota exceeded.
+2025-07-20 22:04:14,603 - discord.client - ERROR - Attempting a reconnect in 10.45s
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 1067, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 770, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 725, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 642, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1209, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1532, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1148, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\tasks.py", line 506, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\timeouts.py", line 116, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+2025-07-20 22:04:17,213 - discord.app_commands.tree - ERROR - Ignoring exception in command tree
+Traceback (most recent call last):
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\app_commands\tree.py", line 1151, in wrapper
+    await self._call(interaction)
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\app_commands\tree.py", line 1283, in _call
+    command, options = self._get_app_command_options(data)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\app_commands\tree.py", line 1187, in _get_app_command_options
+    raise CommandNotFound(name, parents)
+discord.app_commands.errors.CommandNotFound: Application command 'join' not found
+2025-07-20 22:04:17,216 - discord.app_commands.tree - ERROR - Ignoring exception in command tree
+Traceback (most recent call last):
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\app_commands\tree.py", line 1151, in wrapper
+    await self._call(interaction)
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\app_commands\tree.py", line 1283, in _call
+    command, options = self._get_app_command_options(data)
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\app_commands\tree.py", line 1187, in _get_app_command_options
+    raise CommandNotFound(name, parents)
+discord.app_commands.errors.CommandNotFound: Application command 'join' not found
+2025-07-20 22:04:17,620 - discord.voice_state - INFO - Connecting to voice...
+2025-07-20 22:04:17,620 - discord.voice_state - INFO - Starting voice handshake... (connection attempt 1)
+2025-07-20 22:04:18,100 - discord.voice_state - INFO - Voice handshake complete. Endpoint found: singapore11094.discord.media
+2025-07-20 22:04:18,297 - discord.voice_state - INFO - Voice connection complete.
+2025-07-20 22:04:18,830 - __main__ - INFO - Successfully joined voice channel: ล็อบบี้
+2025-07-20 22:06:17,162 - __main__ - ERROR - Unexpected error in play command: 404 Not Found (error code: 10062): Unknown interaction
+2025-07-20 22:06:17,165 - __main__ - ERROR - Unexpected error in play command: 404 Not Found (error code: 10062): Unknown interaction
+2025-07-20 22:06:17,187 - __main__ - INFO - Play command started for query: https://www.youtube.com/watch?v=4VbB4JaBSLc&list=R...
+2025-07-20 22:06:17,841 - __main__ - INFO - Extracting info for URL: https://www.youtube.com/watch?v=4VbB4JaBSLc&list=RD4VbB4JaBSLc&start_radio=1
+2025-07-20 22:06:21,742 - __main__ - INFO - Successfully created audio source for: รักน้อง - โก๊ะ นิพนธ์ [Official MV]
+2025-07-20 22:06:21,744 - __main__ - INFO - Started playing: รักน้อง - โก๊ะ นิพนธ์ [Official MV] in guild 894871922637172747
+2025-07-20 22:06:43,406 - __main__ - ERROR - Error in Firebase listener: Timeout of 300.0s exceeded, last exception: 429 Quota exceeded.
+2025-07-20 22:06:43,406 - discord.client - ERROR - Attempting a reconnect in 2.59s
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 1067, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 770, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 725, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 642, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1209, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1532, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1148, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\tasks.py", line 506, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\timeouts.py", line 116, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+2025-07-20 22:06:47,153 - __main__ - ERROR - Error in Firebase listener: Timeout of 300.0s exceeded, last exception: 429 Quota exceeded.
+2025-07-20 22:07:58,911 - __main__ - ERROR - Error processing guild 575267060569997322: Timeout of 300.0s exceeded, last exception: 429 Quota exceeded.
+2025-07-20 22:08:33,043 - __main__ - ERROR - Error in Firebase listener: Timeout of 300.0s exceeded, last exception: 429 Quota exceeded.
+2025-07-20 22:09:32,044 - __main__ - INFO - Queue is empty for guild 894871922637172747
+2025-07-20 22:09:32,044 - discord.player - INFO - ffmpeg process 30524 has not terminated. Waiting to terminate...
+2025-07-20 22:09:32,049 - discord.player - INFO - ffmpeg process 30524 should have terminated with a return code of 1.
+2025-07-20 22:10:01,408 - __main__ - ERROR - Unexpected error in play command: 404 Not Found (error code: 10062): Unknown interaction
+2025-07-20 22:10:01,421 - __main__ - WARNING - Interaction expired before response could be sent
+2025-07-20 22:10:01,523 - __main__ - ERROR - Failed to connect to voice channel: PyNaCl library needed in order to use voice
+2025-07-20 22:11:09,668 - __main__ - ERROR - Error in Firebase listener: Timeout of 300.0s exceeded, last exception: 429 Quota exceeded.
+2025-07-20 22:11:09,669 - discord.client - ERROR - Attempting a reconnect in 2.67s
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 1067, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 770, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 725, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 642, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1209, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1532, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1148, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\tasks.py", line 506, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\timeouts.py", line 116, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+2025-07-20 22:11:17,138 - __main__ - ERROR - Error in Firebase listener: Timeout of 300.0s exceeded, last exception: 429 Quota exceeded.
+2025-07-20 22:12:52,731 - __main__ - ERROR - Error processing guild 738709617571528735: Timeout of 300.0s exceeded, last exception: 429 Quota exceeded.
+2025-07-20 22:13:14,869 - __main__ - ERROR - Error in Firebase listener: Timeout of 300.0s exceeded, last exception: 429 Quota exceeded.
+2025-07-20 22:13:14,869 - discord.client - ERROR - Attempting a reconnect in 55.44s
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 1067, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 770, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 725, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 642, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1209, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1532, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1148, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\tasks.py", line 506, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\timeouts.py", line 116, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+2025-07-20 22:15:49,034 - __main__ - ERROR - Error in Firebase listener: Timeout of 300.0s exceeded, last exception: 429 Quota exceeded.
+2025-07-20 22:16:11,015 - __main__ - ERROR - Error in Firebase listener: Timeout of 300.0s exceeded, last exception: 429 Quota exceeded.
+2025-07-20 22:16:11,016 - discord.client - ERROR - Attempting a reconnect in 8.35s
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 1067, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 770, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 725, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 642, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1209, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1532, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1148, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\tasks.py", line 506, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\timeouts.py", line 116, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+2025-07-20 22:17:31,322 - __main__ - ERROR - Error processing guild 894871922637172747: Timeout of 300.0s exceeded, last exception: 429 Quota exceeded.
+2025-07-20 22:17:49,208 - __main__ - ERROR - Error in Firebase listener: Timeout of 300.0s exceeded, last exception: 429 Quota exceeded.
+2025-07-20 22:20:28,311 - __main__ - ERROR - Error in Firebase listener: Timeout of 300.0s exceeded, last exception: 429 Quota exceeded.
+2025-07-20 22:20:44,509 - __main__ - ERROR - Error in Firebase listener: Timeout of 300.0s exceeded, last exception: 429 Quota exceeded.
+2025-07-20 22:20:44,509 - discord.client - ERROR - Attempting a reconnect in 4.74s
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 1067, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 770, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 725, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 642, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1209, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1532, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1148, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\tasks.py", line 506, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\timeouts.py", line 116, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+2025-07-20 22:22:21,715 - __main__ - ERROR - Error processing guild 575267060569997322: Timeout of 300.0s exceeded, last exception: 429 Quota exceeded.
+2025-07-20 22:22:29,544 - __main__ - ERROR - Error in Firebase listener: Timeout of 300.0s exceeded, last exception: 429 Quota exceeded.
+2025-07-20 22:22:29,545 - discord.client - ERROR - Attempting a reconnect in 117.49s
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 1067, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 770, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 725, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 642, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1209, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1532, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1148, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\tasks.py", line 506, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\timeouts.py", line 116, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+2025-07-20 22:23:03,037 - __main__ - ERROR - Unexpected error in play command: 404 Not Found (error code: 10062): Unknown interaction
+2025-07-20 22:23:03,080 - __main__ - WARNING - Interaction expired before response could be sent
+2025-07-20 22:23:03,140 - __main__ - ERROR - Failed to connect to voice channel: PyNaCl library needed in order to use voice
+2025-07-20 22:23:29,420 - __main__ - INFO - Firebase connection established for bot
+2025-07-20 22:23:29,509 - __main__ - WARNING - Opus library not found - voice quality may be reduced
+2025-07-20 22:23:29,509 - __main__ - INFO - Voice system initialized successfully
+2025-07-20 22:23:29,511 - discord.client - INFO - logging in using static token
+2025-07-20 22:23:31,005 - discord.gateway - INFO - Shard ID None has connected to Gateway (Session ID: 5cdee3e09400cfddf8b7584695d9cb9d).
+2025-07-20 22:23:33,031 - __main__ - INFO - Bot logged in as พี่มาแล้วน้อง (ID: 1056951165943816303)
+2025-07-20 22:23:33,510 - __main__ - INFO - Successfully synced 0 commands
+2025-07-20 22:23:33,511 - __main__ - ERROR - Missing critical commands: ['play', 'join', 'leave', 'skip', 'stop']
+2025-07-20 22:23:33,511 - __main__ - INFO - Started Firebase command listener with rate limiting
+2025-07-20 22:25:18,095 - __main__ - ERROR - Error in Firebase listener: Timeout of 300.0s exceeded, last exception: 429 Quota exceeded.
+2025-07-20 22:25:21,418 - __main__ - ERROR - Error in Firebase listener: Timeout of 300.0s exceeded, last exception: 429 Quota exceeded.
+2025-07-20 22:25:21,418 - discord.client - ERROR - Attempting a reconnect in 0.40s
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 1067, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 770, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 725, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 642, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1209, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1532, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1148, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\tasks.py", line 506, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\timeouts.py", line 116, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+2025-07-20 22:27:21,632 - __main__ - ERROR - Error in Firebase listener: Timeout of 300.0s exceeded, last exception: 429 Quota exceeded.
+2025-07-20 22:28:25,898 - __main__ - ERROR - Error processing guild 575267060569997322: Timeout of 300.0s exceeded, last exception: 429 Quota exceeded.
+2025-07-20 22:29:50,194 - __main__ - ERROR - Error in Firebase listener: Timeout of 300.0s exceeded, last exception: 429 Quota exceeded.
+2025-07-20 22:30:16,257 - __main__ - ERROR - Error in Firebase listener: Timeout of 300.0s exceeded, last exception: 429 Quota exceeded.
+2025-07-20 22:30:16,258 - discord.client - ERROR - Attempting a reconnect in 4.98s
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 1067, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 770, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 725, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 642, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1209, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1532, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1148, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\tasks.py", line 506, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\timeouts.py", line 116, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+2025-07-20 22:31:56,301 - __main__ - ERROR - Error in Firebase listener: Timeout of 300.0s exceeded, last exception: 429 Quota exceeded.
+2025-07-20 22:31:56,301 - discord.client - ERROR - Attempting a reconnect in 245.65s
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 1067, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 770, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 725, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 642, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1209, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1532, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1148, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\tasks.py", line 506, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\timeouts.py", line 116, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+2025-07-20 22:33:16,519 - __main__ - ERROR - Error processing guild 738709617571528735: Timeout of 300.0s exceeded, last exception: 429 Quota exceeded.
+2025-07-20 22:34:19,041 - __main__ - ERROR - Error in Firebase listener: Timeout of 300.0s exceeded, last exception: 429 Quota exceeded.
+2025-07-20 22:34:19,042 - discord.client - ERROR - Attempting a reconnect in 16.54s
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 1067, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 770, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 725, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 642, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1209, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1532, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1148, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\tasks.py", line 506, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\timeouts.py", line 116, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+2025-07-20 22:34:30,030 - __main__ - ERROR - Error in Firebase listener: Timeout of 300.0s exceeded, last exception: 429 Quota exceeded.
+2025-07-20 22:36:42,782 - __main__ - ERROR - Error in Firebase listener: Timeout of 300.0s exceeded, last exception: 429 Quota exceeded.
+2025-07-20 22:37:37,932 - __main__ - ERROR - Error processing guild 894871922637172747: Timeout of 300.0s exceeded, last exception: 429 Quota exceeded.
+2025-07-20 22:39:03,087 - __main__ - ERROR - Error in Firebase listener: Timeout of 300.0s exceeded, last exception: 429 Quota exceeded.
+2025-07-20 22:39:03,087 - discord.client - ERROR - Attempting a reconnect in 53.07s
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 1067, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 770, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 725, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 642, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1209, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1532, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1148, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\tasks.py", line 506, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\timeouts.py", line 116, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+2025-07-20 22:39:05,939 - __main__ - ERROR - Error in Firebase listener: Timeout of 300.0s exceeded, last exception: 429 Quota exceeded.
+2025-07-20 22:41:34,461 - __main__ - ERROR - Error in Firebase listener: Timeout of 300.0s exceeded, last exception: 429 Quota exceeded.
+2025-07-20 22:41:34,462 - discord.client - ERROR - Attempting a reconnect in 352.12s
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 1067, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 770, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 725, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 642, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1209, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1532, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1148, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\tasks.py", line 506, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\timeouts.py", line 116, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+2025-07-20 22:42:33,091 - __main__ - ERROR - Error processing guild 575267060569997322: Timeout of 300.0s exceeded, last exception: 429 Quota exceeded.
+2025-07-20 22:43:59,526 - __main__ - ERROR - Error in Firebase listener: Timeout of 300.0s exceeded, last exception: 429 Quota exceeded.
+2025-07-20 22:43:59,596 - __main__ - ERROR - Error in Firebase listener: Timeout of 300.0s exceeded, last exception: 429 Quota exceeded.
+2025-07-20 22:43:59,596 - discord.client - ERROR - Attempting a reconnect in 126.27s
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\tasks.py", line 507, in wait_for
+    return await fut
+           ^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\gateway.py", line 375, in from_client
+    socket = await client.http.ws_connect(str(url))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\http.py", line 554, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 1067, in _ws_connect
+    resp = await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+    ...<11 lines>...
+    )
+    ^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 770, in _request
+    resp = await handler(req)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\client.py", line 725, in _connect_and_send_request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        req, traces=traces, timeout=real_timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 642, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1209, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1532, in _create_direct_connection
+    hosts = await self._resolve_host(host, port, traces=traces)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\aiohttp\connector.py", line 1148, in _resolve_host
+    return await asyncio.shield(resolved_host_task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\punpu\.gemini\discord-bot-dashboard\venv\Lib\site-packages\discord\client.py", line 701, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\tasks.py", line 506, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.1520.0_x64__qbz5n2kfra8p0\Lib\asyncio\timeouts.py", line 116, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+2025-07-20 22:46:18,692 - __main__ - ERROR - Error in Firebase listener: Timeout of 300.0s exceeded, last exception: 429 Quota exceeded.

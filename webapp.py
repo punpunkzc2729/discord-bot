@@ -1,5 +1,7 @@
 # webapp.py
 import os
+import sys
+import re
 from flask import Flask, render_template, redirect, url_for, session, request, jsonify
 from dotenv import load_dotenv
 import firebase_admin
@@ -8,22 +10,64 @@ import logging
 import requests
 from functools import wraps
 from typing import Optional, Dict, List
+import bleach
+from urllib.parse import urlparse
 
 # --- การตั้งค่าเริ่มต้น ---
 load_dotenv()
+
+# Configure console output encoding for Windows
+if sys.platform == 'win32':
+    sys.stdout.reconfigure(encoding='utf-8')
+    sys.stderr.reconfigure(encoding='utf-8')
 
 # Setup detailed logging
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler('webapp.log'),
+        logging.FileHandler('webapp.log', encoding='utf-8'),
         logging.StreamHandler()
     ]
 )
 logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
+
+# Security headers middleware
+@app.after_request
+def add_security_headers(response):
+    """Add security headers to all responses"""
+    response.headers['X-Content-Type-Options'] = 'nosniff'
+    response.headers['X-Frame-Options'] = 'DENY'
+    response.headers['X-XSS-Protection'] = '1; mode=block'
+    response.headers['Strict-Transport-Security'] = 'max-age=31536000; includeSubDomains'
+    response.headers['Content-Security-Policy'] = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'"
+    return response
+
+# Input validation functions
+def validate_guild_id(guild_id: str) -> bool:
+    """Validate Discord guild ID format"""
+    return bool(re.match(r'^\d{17,19}$', guild_id))
+
+def validate_action(action: str) -> bool:
+    """Validate allowed actions"""
+    allowed_actions = ['play', 'skip', 'stop', 'pause', 'resume', 'queue']
+    return action in allowed_actions
+
+def sanitize_query(query: str) -> str:
+    """Sanitize search query input"""
+    if not query:
+        return ""
+    
+    # Remove any potential harmful content
+    sanitized = bleach.clean(query.strip(), tags=[], strip=True)
+    
+    # Limit length
+    if len(sanitized) > 200:
+        sanitized = sanitized[:200]
+    
+    return sanitized
 
 # Validate required environment variables
 required_env_vars = {
@@ -63,8 +107,15 @@ try:
         raise FileNotFoundError(f"Firebase credentials file not found: {FIREBASE_CREDENTIALS_PATH}")
     
     cred = credentials.Certificate(FIREBASE_CREDENTIALS_PATH)
-    firebase_admin.initialize_app(cred)
-    db = firestore.client()
+    # Use a different app name to avoid conflicts with bot.py
+    try:
+        firebase_admin.initialize_app(cred, name='webapp')
+    except ValueError:
+        # App already exists, get existing app
+        pass
+    
+    firebase_app = firebase_admin.get_app('webapp')
+    db = firestore.client(app=firebase_app)
     logger.info("Firebase connection established successfully")
 except Exception as e:
     logger.error(f"Failed to connect to Firebase: {e}")
@@ -163,15 +214,22 @@ def index():
 
 @app.route("/login")
 def login():
-    """ส่งผู้ใช้ไปหน้า Authorize ของ Discord"""
+    """ส่งผู้ใช้ไปหน้า Authorize ของ Discord พร้อม CSRF protection"""
     try:
-        # สร้าง Discord OAuth URL
+        import secrets
+        
+        # สร้าง state parameter สำหรับ CSRF protection
+        state = secrets.token_urlsafe(32)
+        session['oauth_state'] = state
+        
+        # สร้าง Discord OAuth URL พร้อม state parameter
         oauth_url = (
             f"https://discord.com/api/oauth2/authorize"
             f"?client_id={app.config['DISCORD_CLIENT_ID']}"
             f"&redirect_uri={app.config['DISCORD_REDIRECT_URI']}"
             f"&response_type=code"
             f"&scope=identify%20guilds"
+            f"&state={state}"
         )
         return redirect(oauth_url)
     except Exception as e:
@@ -180,9 +238,19 @@ def login():
 
 @app.route("/callback")
 def callback():
-    """รับข้อมูลกลับมาจาก Discord หลังล็อกอิน"""
+    """รับข้อมูลกลับมาจาก Discord หลังล็อกอิน พร้อม state validation"""
     try:
         code = request.args.get('code')
+        state = request.args.get('state')
+        
+        # ตรวจสอบ state parameter เพื่อป้องกัน CSRF
+        if not state or state != session.get('oauth_state'):
+            logger.warning("Invalid or missing OAuth state parameter")
+            return redirect(url_for('login'))
+        
+        # ลบ state จาก session หลังใช้แล้ว
+        session.pop('oauth_state', None)
+        
         if not code:
             logger.warning("No authorization code received")
             return redirect(url_for('login'))
@@ -265,22 +333,35 @@ def command():
 
         guild_id = data.get("guild_id")
         action = data.get("action")
-        payload = data.get("payload")
+        payload = data.get("payload", {})
         
-        # Validate required fields
+        # Enhanced input validation
         if not guild_id or not action:
             return jsonify({
                 "status": "error", 
                 "message": "ข้อมูลไม่ครบถ้วน (guild_id และ action จำเป็น)"
             }), 400
 
-        # Validate action type
-        allowed_actions = ['play', 'skip', 'stop', 'pause', 'resume', 'queue']
-        if action not in allowed_actions:
+        # Validate guild ID format
+        if not validate_guild_id(str(guild_id)):
             return jsonify({
                 "status": "error", 
-                "message": f"Action ไม่ถูกต้อง ต้องเป็น: {', '.join(allowed_actions)}"
+                "message": "Guild ID format ไม่ถูกต้อง"
             }), 400
+
+        # Validate action type
+        if not validate_action(action):
+            return jsonify({
+                "status": "error", 
+                "message": f"Action ไม่ถูกต้อง ต้องเป็น: play, skip, stop, pause, resume, queue"
+            }), 400
+        
+        # Sanitize payload
+        if isinstance(payload, dict):
+            if 'query' in payload:
+                payload['query'] = sanitize_query(payload['query'])
+        else:
+            payload = {}
 
         user = session.get('discord_user')
         if not user:
@@ -331,10 +412,10 @@ def internal_error(error):
 if __name__ == "__main__":
     try:
         logger.info("Starting Flask web application")
-        print("🌐 Starting Discord Bot Dashboard...")
-        print(f"🔗 Access at: http://localhost:5001")
+        print("[WEB] Starting Discord Bot Dashboard...")
+        print("[WEB] Access at: http://localhost:5001")
         app.run(debug=True, port=5001, host='0.0.0.0')
     except Exception as e:
         logger.error(f"Failed to start web application: {e}")
-        print(f"❌ Failed to start web application: {e}")
+        print(f"[ERROR] Failed to start web application: {e}")
 

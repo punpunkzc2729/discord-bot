@@ -3,81 +3,288 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>แผงควบคุมบอท</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>🎵 Discord Music Controller</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
 </head>
 <body>
-    <div class="main-container">
-        <nav class="sidebar">
-            <div class="sidebar-header">
-                <h3><i class="fas fa-robot"></i> Bot Control</h3>
-            </div>
-            <ul class="sidebar-menu">
-                <li class="active"><a href="#"><i class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a></li>
-                <li><a href="#"><i class="fas fa-list-music"></i> <span>Queue</span></a></li>
-                <li><a href="#"><i class="fas fa-cog"></i> <span>Settings</span></a></li>
-            </ul>
-            <div class="sidebar-footer">
-                 <div class="user-info">
-                    <img src="{{ user.avatar_url }}" alt="Avatar" class="avatar">
-                    <div class="user-details">
-                        <span>{{ user.username }}</span>
-                        <a href="{{ url_for('logout') }}">ออกจากระบบ</a>
-                    </div>
+    <div class="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <div class="logo">
+                    <i class="fas fa-music"></i>
+                    <span>Discord Music</span>
                 </div>
             </div>
-        </nav>
-
-        <main class="content">
-            <header class="content-header">
-                <div class="guild-selector">
-                    <label for="guild-select"><i class="fas fa-server"></i></label>
+            
+            <div class="header-center">
+                <div class="search-box">
+                    <input type="text" id="main-search" placeholder="Search for songs, artists, or paste YouTube links...">
+                    <button id="search-btn" class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="header-right">
+                <div class="server-selector">
+                    <i class="fas fa-server"></i>
                     <select id="guild-select">
-                        <option value="">-- กรุณาเลือกเซิร์ฟเวอร์ --</option>
-                        {% for guilds in guilds %}
-                        <option value="{{ guilds.id }}">{{ guilds.name }}</option>
+                        <option value="">Select Server</option>
+                        {% for guild in guilds %}
+                        <option value="{{ guild.id }}">{{ guild.name }}</option>
                         {% endfor %}
                     </select>
                 </div>
-            </header>
-
-            <div id="dashboard-content" class="dashboard-grid hidden">
-                <!-- Player Section -->
-                <div class="card player-card">
-                    <div class="album-art">
-                        <i class="fas fa-music"></i>
+                <div class="user-profile">
+                    <img src="{{ user.avatar_url }}" alt="{{ user.username }}" class="avatar">
+                    <div class="user-dropdown">
+                        <span>{{ user.username }}</span>
+                        <a href="{{ url_for('logout') }}">
+                            <i class="fas fa-sign-out-alt"></i> Logout
+                        </a>
                     </div>
-                    <div class="track-info">
-                        <h2 id="current-track-title">ยังไม่มีเพลงเล่น</h2>
-                        <p id="current-track-requester">เลือกเพลงได้เลย</p>
-                    </div>
-                    <div class="controls">
-                        <button id="skip-btn" class="control-btn" title="ข้ามเพลง"><i class="fas fa-forward-step"></i></button>
-                        <button id="stop-btn" class="control-btn stop" title="หยุดเพลง"><i class="fas fa-stop"></i></button>
-                    </div>
-                </div>
-
-                <!-- Add Song & Queue Section -->
-                <div class="card song-management-card">
-                    <h3><i class="fa-solid fa-plus"></i> เพิ่มเพลงใหม่</h3>
-                     <div class="play-control">
-                        <input type="text" id="song-query" placeholder="ชื่อเพลง หรือ ลิงก์ YouTube">
-                        <button id="play-btn" class="btn-play"><i class="fas fa-play"></i></button>
-                    </div>
-                    
-                    <hr class="divider">
-
-                    <h3><i class="fas fa-list"></i> คิวเพลงถัดไป</h3>
-                    <ul id="queue-list">
-                        <li>คิวยังว่างอยู่</li>
-                    </ul>
                 </div>
             </div>
-        </main>
+        </header>
+
+        <!-- Main Content -->
+        <div class="main-content" id="main-content" style="display: none;">
+            <!-- Quick Actions -->
+            <div class="quick-actions">
+                <button class="quick-btn" id="shuffle-btn">
+                    <i class="fas fa-shuffle"></i>
+                    <span>Shuffle</span>
+                </button>
+                <button class="quick-btn" id="repeat-btn">
+                    <i class="fas fa-repeat"></i>
+                    <span>Repeat</span>
+                </button>
+                <button class="quick-btn" id="clear-queue-btn">
+                    <i class="fas fa-trash"></i>
+                    <span>Clear Queue</span>
+                </button>
+            </div>
+
+            <!-- Main Content Grid -->
+            <div class="content-grid">
+                <!-- Now Playing Card -->
+                <div class="card now-playing-card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-play-circle"></i> Now Playing</h3>
+                        <div class="card-actions">
+                            <button class="action-btn" id="volume-btn">
+                                <i class="fas fa-volume-high"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="now-playing-content">
+                        <div class="track-artwork">
+                            <div class="artwork-placeholder">
+                                <i class="fas fa-music"></i>
+                            </div>
+                            <div class="play-overlay" id="main-play-btn">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        
+                        <div class="track-details">
+                            <h4 id="current-track-title">No song playing</h4>
+                            <p id="current-track-artist">Select a song to start playing</p>
+                            <div class="track-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="progress-fill"></div>
+                                    <div class="progress-handle" id="progress-handle"></div>
+                                </div>
+                                <div class="time-info">
+                                    <span id="current-time">0:00</span>
+                                    <span id="total-time">0:00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Queue Card -->
+                <div class="card queue-card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-list"></i> Queue</h3>
+                        <div class="card-actions">
+                            <button class="action-btn" id="queue-settings">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="queue-content">
+                        <div class="queue-list" id="queue-list">
+                            <div class="queue-item empty-state">
+                                <div class="empty-icon">
+                                    <i class="fas fa-list-music"></i>
+                                </div>
+                                <div class="empty-text">
+                                    <h4>Queue is empty</h4>
+                                    <p>Add some songs to get started</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Popular Songs -->
+                <div class="card popular-card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-fire"></i> Popular Songs</h3>
+                    </div>
+                    
+                    <div class="popular-content">
+                        <div class="song-grid">
+                            <div class="song-item" data-query="รักนี้เพื่อเธอ">
+                                <div class="song-artwork">
+                                    <i class="fas fa-music"></i>
+                                    <div class="play-overlay">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                </div>
+                                <div class="song-info">
+                                    <h5>รักนี้เพื่อเธอ</h5>
+                                    <p>Bird Thongchai</p>
+                                </div>
+                            </div>
+                            
+                            <div class="song-item" data-query="ขอใจเธอแลกเบอร์โทร">
+                                <div class="song-artwork">
+                                    <i class="fas fa-music"></i>
+                                    <div class="play-overlay">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                </div>
+                                <div class="song-info">
+                                    <h5>ขอใจเธอแลกเบอร์โทร</h5>
+                                    <p>Golf Mike</p>
+                                </div>
+                            </div>
+                            
+                            <div class="song-item" data-query="เธอเก่า">
+                                <div class="song-artwork">
+                                    <i class="fas fa-music"></i>
+                                    <div class="play-overlay">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                </div>
+                                <div class="song-info">
+                                    <h5>เธอเก่า</h5>
+                                    <p>Three Man Down</p>
+                                </div>
+                            </div>
+                            
+                            <div class="song-item" data-query="คิดถึงเธอ">
+                                <div class="song-artwork">
+                                    <i class="fas fa-music"></i>
+                                    <div class="play-overlay">
+                                        <i class="fas fa-play"></i>
+                                    </div>
+                                </div>
+                                <div class="song-info">
+                                    <h5>คิดถึงเธอ</h5>
+                                    <p>Palmy</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Welcome Screen -->
+        <div class="welcome-screen" id="welcome-screen">
+            <div class="welcome-content">
+                <div class="welcome-icon">
+                    <i class="fas fa-music"></i>
+                </div>
+                <h1>Welcome to Discord Music</h1>
+                <p>Select a server from the dropdown above to start controlling your music bot</p>
+                <div class="features">
+                    <div class="feature">
+                        <i class="fas fa-play"></i>
+                        <span>Play from YouTube</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-list"></i>
+                        <span>Manage Queue</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-users"></i>
+                        <span>Multi-Server Support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Player Controls -->
+        <div class="player-controls" id="player-controls" style="display: none;">
+            <div class="controls-left">
+                <div class="current-song">
+                    <div class="song-thumb">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <div class="song-meta">
+                        <div class="song-title" id="controls-track-title">No song playing</div>
+                        <div class="song-artist" id="controls-track-artist">Select a song</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="controls-center">
+                <div class="control-buttons">
+                    <button class="control-btn" id="prev-btn">
+                        <i class="fas fa-backward-step"></i>
+                    </button>
+                    <button class="control-btn primary" id="play-pause-btn">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <button class="control-btn" id="next-btn">
+                        <i class="fas fa-forward-step"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="controls-right">
+                <div class="volume-control">
+                    <button class="control-btn" id="volume-toggle">
+                        <i class="fas fa-volume-high"></i>
+                    </button>
+                    <div class="volume-slider">
+                        <input type="range" id="volume-range" min="0" max="100" value="50">
+                    </div>
+                </div>
+                <button class="control-btn" id="queue-toggle">
+                    <i class="fas fa-list"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Volume Slider -->
+        <div class="volume-popup" id="volume-popup" style="display: none;">
+            <div class="volume-slider-vertical">
+                <input type="range" id="volume-slider-main" min="0" max="100" value="50" orient="vertical">
+            </div>
+        </div>
     </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loading-overlay" style="display: none;">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
     <script src="{{ url_for('static', filename='main.js') }}"></script>
 </body>
 </html>

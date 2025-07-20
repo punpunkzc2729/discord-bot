@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(yt-dlp:*)",
+      "Bash(pip install:*)",
+      "Bash(taskkill:*)",
+      "Bash(wmic process where:*)",
+      "WebFetch(domain:claude.ai)",
+      "Bash(timeout:*)",
+      "Bash(ls:*)",
+      "Bash(where:*)",
+      "Bash(powershell:*)",
+      "Bash(pip uninstall:*)"
+    ],
+    "deny": []
+  }
+}
